@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Upload an Image</title>
+    <%- include("partials/head") -%>
+</head>
+
+<body>
+
+    <%- include("partials/navigation") %>
+
+    
+  
+
+    <div>
+        <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-xl-10">
+              <div class="card rounded-3 text-black">
+                <div class="container">
+                  <div class="card-body p-md-5 mx-md-4">
+                    <h1 style="text-align: center;"><strong> REGISTRO DE ALUMNOS</strong></h1> 
+                    <form style="margin-top: 2rem;" class="row g-3" action="/registrar" method="post" enctype="multipart/form-data">
+
+                      <div class="container">
+                    <h4><strong> Informacion personal </strong></h4>
+                      </div>
+    
+                      <div class="col-6">
+                        <label for="nombre" class="form-label">Nombre(s).</label>
+                        <input type="text" name="nombre" placeholder="nombre" class="form-control">
+                      </div>
+                      
+                    <div class="col-md-6">
+                      <label for="apePat" class="form-label">Apellido paterno.</label>
+                      <input type="text" name="apePat" placeholder="apellido paterno" class="form-control">
+                    </div>
+          
+                    <div class="col-6">
+                      <label for="apeMat" class="form-label">Apellido materno.</label>
+                      <input type="text" name="apeMat" placeholder="apellido materno" class="form-control">
+                    </div>
+    
+                    <div class="col-6">
+                      <label for="correo" class="form-label">Email</label>
+                      <input type="email" name="correo" placeholder="correo electronico" class="form-control">
+                    </div>
+    
+                    <div class="col-6">
+                      <label for="telefonoPersonal" class="form-label">Telefono personal (Solo 10 Digitos).</label>
+                      <input type="tel" name="telefonoPersonal" placeholder="Telefono personal"   maxlength="10" class="form-control">
+                    </div>
+    
+                    <div class="col-6">
+                      <label for="telefonoCasa" class="form-label">Telefono de tu domicilio (Solo 10 Digitos).</label>
+                      <input type="tel" name="telefonoCasa" placeholder="Telefono de tu domicilio"  maxlength="10" class="form-control">
+                    </div>
+    
+                    <div class="col-6">
+                      <label for="telefonoTutor" class="form-label">Telefono del tutor acargo (Solo 10 Digitos).</label>
+                      <input type="tel" name="telefonoTutor"  placeholder="Telefono del tutor"  maxlength="10" class="form-control">
+                    </div>
+    
+                  
+    
+                    <div class="container">
+    
+                      <h4 style="margin-top: 3rem;">Direccion de tu hogar</h4>
+                    </div>
+                
+    
+                    <div class="col-md-6">
+                      <label for="calle" class="form-label">Calle.</label>
+                      <input type="text" name="calle" placeholder="calle" class="form-control">
+                    </div>
+          
+                    <div class="col-6">
+                      <label for="noExterior" class="form-label">Numero exterior</label>
+                      <input type="number" name="noExterior" placeholder="noExterior" class="form-control">                       
+                    </div>
+    
+                    <div class="col-6">
+                      <label for="colonia" class="form-label">Colonia</label>
+                      <input type="text" name="colonia" placeholder="colonia" class="form-control">
+                    </div>
+    
+                    <div class="col-6">
+                      <label for="ciudad" class="form-label">Ciudad</label>
+                      <input type="text" name="ciudad" placeholder="ciudad" class="form-control">
+                    </div>
+                      
+                    <div class="col-6">
+                      <label for="cP" class="form-label">Codigo postal</label>
+                      <input type="tel" name="cP" placeholder="codigo postal" maxlength="5" class="form-control">
+                    </div>
+    
+                    <div class="container">
+    
+                      <h4 style="margin-top: 3rem;">Informacion Escolar</h4>
+                    </div>
+    
+                    <div class="col-6">
+                      <label for="bachilleratoPro" class="form-label">Bachillerato de procedencia</label>
+                      <input type="text" name="bachilleratoPro" placeholder="Bachillerato de procedencia" class="form-control"> 
+                    </div>
+                    
+                    <div class="col-6">
+                      <label for="promedio" class="form-label">Promedio</label>
+                      <input type="number" name="promedio" pattern="[0-9]" maxlength="1" placeholder="Ultimo promedio obtenido" class="form-control">
+                    </div>
+                    
+                    <div class="col-6">
+                      <label for="especialidadCursada" class="form-label">Especialidad cursada</label>
+                      <input type="text" name="especialidadCursada" placeholder="Especialidad cursada" class="form-control">
+                    </div>
+    
+                    <div class="container">
+    
+                      <h4 style="margin-top: 3rem;">Informacion de los padres</h4>
+                    </div>
+    
+                    <div class="container">
+                      <h6>Mama</h6>
+                    </div>
+    
+                    <div class="col-6">
+                      <label for="nombreMama" class="form-label">Nombre de la madre</label>
+                      <input type="text" name="nombreMama" placeholder="nombre de mama" class="form-control">
+                    </div>
+                    
+                    <div class="col-6">
+                      <label for="apePatMama" class="form-label">Apellido paterno de la madre</label>
+                      <input type="text" name="apePatMama" placeholder="apellido de paterno de mama" class="form-control">
+                    </div>
+    
+                    <div class="col-6">
+                      <label for="apeMatMama" class="form-label">Apellido materno de la madre</label>
+                      <input type="text" name="apeMatMama" placeholder="apellido de materno de mama" class="form-control">
+                    </div>
+    
+                    <div class="container">
+                      <h6 style="margin-top: 1rem;">Papa</h6>
+                    </div>
+    
+                    <div class="col-6">
+                      <label for="nombreMama" class="form-label">Nombre del padre</label>
+                      <input type="text" name="nombrePapa" placeholder="nombre del padre" class="form-control">
+                    </div>
+                    
+                    <div class="col-6">
+                      <label for="apePatPapa" class="form-label">Apellido paterno del padre</label>
+                      <input type="text" name="apePatPapa" placeholder="apellido de paterno de mama" class="form-control">
+                    </div>
+    
+                    <div class="col-6">
+                      <label for="apeMatPapa" class="form-label">Apellido materno del padre</label>
+                      <input type="text" name="apeMatPapa" placeholder="apellido de materno de mama" class="form-control">
+                    </div>
+    
+                    <div class="container">
+                      <h6 style="margin-top: 1rem;">Cargar imagenes de los documentos que se solicitan</h6>
+                    </div>
+    
+                    <div class="input-group mb-3">
+                        <div class="custom-file">
+                            <input type="file" name="image" class="custom-file-input" id="inputGroupFile02">
+                            <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose
+                                file</label>
+                        </div>
+                    </div>
+                    
+                
+                    <div class="form-group">
+                        <button class="btn btn-success btn-block">
+                            Upload
+                        </button>
+                    </div>
+                    
+                    </form>
+                  </div>
+                </div>
+    
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+</body>
+
+</html>
