@@ -32,37 +32,37 @@
     
                       <div class="col-6">
                         <label for="nombre" class="form-label">Nombre(s).</label>
-                        <input type="text" name="nombre" placeholder="nombre" class="form-control">
+                        <input type="text" name="nombre" placeholder="nombre" required class="form-control">
                       </div>
                       
                     <div class="col-md-6">
                       <label for="apePat" class="form-label">Apellido paterno.</label>
-                      <input type="text" name="apePat" placeholder="apellido paterno" class="form-control">
+                      <input type="text" name="apePat" placeholder="apellido paterno" required class="form-control">
                     </div>
           
                     <div class="col-6">
                       <label for="apeMat" class="form-label">Apellido materno.</label>
-                      <input type="text" name="apeMat" placeholder="apellido materno" class="form-control">
+                      <input type="text" name="apeMat" placeholder="apellido materno" required class="form-control">
                     </div>
     
                     <div class="col-6">
                       <label for="correo" class="form-label">Email</label>
-                      <input type="email" name="correo" placeholder="correo electronico" class="form-control">
+                      <input type="email" name="correo" placeholder="correo electronico" required class="form-control">
                     </div>
     
                     <div class="col-6">
                       <label for="telefonoPersonal" class="form-label">Telefono personal (Solo 10 Digitos).</label>
-                      <input type="tel" name="telefonoPersonal" placeholder="Telefono personal"   maxlength="10" class="form-control">
+                      <input type="tel" name="telefonoPersonal" placeholder="Telefono personal" required minlength="10" maxlength="10" class="form-control">
                     </div>
     
                     <div class="col-6">
                       <label for="telefonoCasa" class="form-label">Telefono de tu domicilio (Solo 10 Digitos).</label>
-                      <input type="tel" name="telefonoCasa" placeholder="Telefono de tu domicilio"  maxlength="10" class="form-control">
+                      <input type="tel" name="telefonoCasa" placeholder="Telefono de tu domicilio" required minlength="10" maxlength="10" class="form-control">
                     </div>
     
                     <div class="col-6">
                       <label for="telefonoTutor" class="form-label">Telefono del tutor acargo (Solo 10 Digitos).</label>
-                      <input type="tel" name="telefonoTutor"  placeholder="Telefono del tutor"  maxlength="10" class="form-control">
+                      <input type="tel" name="telefonoTutor"  placeholder="Telefono del tutor" required minlength="10" maxlength="10" class="form-control">
                     </div>
     
                   
@@ -75,27 +75,27 @@
     
                     <div class="col-md-6">
                       <label for="calle" class="form-label">Calle.</label>
-                      <input type="text" name="calle" placeholder="calle" class="form-control">
+                      <input type="text" name="calle" placeholder="calle" required class="form-control">
                     </div>
           
                     <div class="col-6">
                       <label for="noExterior" class="form-label">Numero exterior</label>
-                      <input type="number" name="noExterior" placeholder="noExterior" class="form-control">                       
+                      <input type="number" name="noExterior" minlength="1" maxlength="1" required placeholder="noExterior" class="form-control">                       
                     </div>
     
                     <div class="col-6">
                       <label for="colonia" class="form-label">Colonia</label>
-                      <input type="text" name="colonia" placeholder="colonia" class="form-control">
+                      <input type="text" name="colonia" placeholder="colonia" required class="form-control">
                     </div>
     
                     <div class="col-6">
                       <label for="ciudad" class="form-label">Ciudad</label>
-                      <input type="text" name="ciudad" placeholder="ciudad" class="form-control">
+                      <input type="text" name="ciudad" placeholder="ciudad" required class="form-control">
                     </div>
                       
                     <div class="col-6">
                       <label for="cP" class="form-label">Codigo postal</label>
-                      <input type="tel" name="cP" placeholder="codigo postal" maxlength="5" class="form-control">
+                      <input type="tel" name="cP" placeholder="codigo postal" required maxlength="5" class="form-control">
                     </div>
     
                     <div class="container">
@@ -105,41 +105,41 @@
     
                     <div class="col-6">
                       <label for="bachilleratoPro" class="form-label">Bachillerato de procedencia</label>
-                      <input type="text" name="bachilleratoPro" placeholder="Bachillerato de procedencia" class="form-control"> 
+                      <input type="text" name="bachilleratoPro" required placeholder="Bachillerato de procedencia" class="form-control">
                     </div>
                     
                     <div class="col-6">
                       <label for="promedio" class="form-label">Promedio</label>
-                      <input type="number" name="promedio" pattern="[0-9]" maxlength="1" placeholder="Ultimo promedio obtenido" class="form-control">
+                      <input type="number" name="promedio" maxlength="1" required minlength="1" placeholder="Ultimo promedio obtenido" class="form-control">
                     </div>
                     
                     <div class="col-6">
                       <label for="especialidadCursada" class="form-label">Especialidad cursada</label>
-                      <input type="text" name="especialidadCursada" placeholder="Especialidad cursada" class="form-control">
+                      <input type="text" name="especialidadCursada" required placeholder="Especialidad cursada" class="form-control">
                     </div>
     
                     <div class="container">
     
                       <h4 style="margin-top: 3rem;">Informacion de los padres</h4>
                     </div>
-    
+     
                     <div class="container">
                       <h6>Mama</h6>
                     </div>
     
                     <div class="col-6">
                       <label for="nombreMama" class="form-label">Nombre de la madre</label>
-                      <input type="text" name="nombreMama" placeholder="nombre de mama" class="form-control">
+                      <input type="text" name="nombreMama" required placeholder="nombre de mama" class="form-control">
                     </div>
                     
                     <div class="col-6">
                       <label for="apePatMama" class="form-label">Apellido paterno de la madre</label>
-                      <input type="text" name="apePatMama" placeholder="apellido de paterno de mama" class="form-control">
+                      <input type="text" name="apePatMama" required placeholder="apellido de paterno de mama" class="form-control">
                     </div>
     
                     <div class="col-6">
                       <label for="apeMatMama" class="form-label">Apellido materno de la madre</label>
-                      <input type="text" name="apeMatMama" placeholder="apellido de materno de mama" class="form-control">
+                      <input type="text" name="apeMatMama" required placeholder="apellido de materno de mama" class="form-control">
                     </div>
     
                     <div class="container">
@@ -148,17 +148,17 @@
     
                     <div class="col-6">
                       <label for="nombreMama" class="form-label">Nombre del padre</label>
-                      <input type="text" name="nombrePapa" placeholder="nombre del padre" class="form-control">
+                      <input type="text" name="nombrePapa" required placeholder="nombre del padre" class="form-control">
                     </div>
                     
                     <div class="col-6">
                       <label for="apePatPapa" class="form-label">Apellido paterno del padre</label>
-                      <input type="text" name="apePatPapa" placeholder="apellido de paterno de mama" class="form-control">
+                      <input type="text" name="apePatPapa" required placeholder="apellido de paterno de mama" class="form-control">
                     </div>
     
                     <div class="col-6">
                       <label for="apeMatPapa" class="form-label">Apellido materno del padre</label>
-                      <input type="text" name="apeMatPapa" placeholder="apellido de materno de mama" class="form-control">
+                      <input type="text" name="apeMatPapa" required placeholder="apellido de materno de mama" class="form-control">
                     </div>
     
                     <div class="container">
@@ -167,7 +167,7 @@
     
                     <div class="input-group mb-3">
                         <div class="custom-file">
-                            <input type="file" name="fotoEstudiante" id="fotoEstudiante" class="custom-file-input" multiples id="inputGroupFile02" accept=".jpg, .png, .jpeg">
+                            <input type="file" name="fotoEstudiante" required id="fotoEstudiante" class="custom-file-input" multiples id="inputGroupFile02" accept=".jpg, .png, .jpeg">
                             <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02"> Cargar tu foto de perfil (Solo formato .jpg, .png, .jpeg)</label>
                         </div>
                     </div>
@@ -178,7 +178,7 @@
 
                     <div class="input-group mb-3">
                       <div class="custom-file">
-                          <input type="file" name="certificado" id="certificado" accept=".pdf" class="custom-file-input" multiples id="inputGroupFile02">
+                          <input type="file" name="certificado" required id="certificado" accept=".pdf" class="custom-file-input" multiples id="inputGroupFile02">
                           <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Sube tu certificado (Solo formato .pdf)</label>
                       </div>
                   </div>
@@ -189,7 +189,7 @@
 
                   <div class="input-group mb-3">
                     <div class="custom-file">
-                        <input type="file" name="comprobanteDomicilio" id="comprobanteDomicilio" accept=".pdf" class="custom-file-input" multiples id="inputGroupFile02">
+                        <input type="file" name="comprobanteDomicilio" required id="comprobanteDomicilio" accept=".pdf" class="custom-file-input" multiples id="inputGroupFile02">
                         <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Sube tu comprobante de domicilio (Solo formato .pdf)</label>
                     </div>
                 </div>
