@@ -1,16 +1,28 @@
-const path = require('path');
+
 const { unlink } = require('fs-extra');
 
 // Models
-const Image = require('../models/alumnosModel');
+const Registro = require('../models/alumnosModel');
 
 exports.ver_alumnos = (async (req, res) => {
-    const images = await Image.find();
+    const images = await Registro.find();
     res.render('index', { images });
 });
 
+
+exports.ver_alumno_Id = ( (req, res) => {
+    const id  = req.params.id;
+    Registro.find({_id:id}, (err, result) => {
+        if (err) {
+            console.log("A ocurrido un error "+err.message);
+        } else {
+            console.log(result); }
+            res.render('perfil-alumno', { datoRegistro:result });
+        });
+});
+
 exports.registar_alumnos = (async (req, res) => {
-    const image = new Image();
+    const image = new Registro();
     image.nombre = req.body.nombre,
     image.apePat = req.body.apePat,
     image.apeMat = req.body.apeMat,
@@ -32,11 +44,9 @@ exports.registar_alumnos = (async (req, res) => {
     image.nombrePapa = req.body.nombrePapa,
     image.apeMatPapa = req.body.apeMatPapa,
     image.apePatPapa = req.body.apePatPapa,
-    image.filename = req.file.filename;
-    image.path = '/img/uploads/' + req.file.filename;
-    image.originalname = req.file.originalname;
-    image.mimetype = req.file.mimetype;
-    image.size = req.file.size;
+    image.fotoEstudiante = req.files.fotoEstudiante[0].filename,
+    image.comprobanteDomicilio = req.files.comprobanteDomicilio[0].filename,
+    image.certificado = req.files.certificado[0].filename,
 
     await image.save((err)=>{
         if (err) {
@@ -47,12 +57,17 @@ exports.registar_alumnos = (async (req, res) => {
     });
 });
 
-exports.ver_alumno_Id = (async (req, res) =>{
-    const { id } = req.params;
-    const image = await Image.findById(id);
-    res.render('profile', { image });
-});
+// exports.ver_alumno_Id = (async (req, res) =>{
+//     const { id } = req.params;
+//     const dato = await Image.findById(id);
+//     res.render('perfil-alumno', { dato });
+// });
 
+// exports.ver_alumno_Id = (async (req, res) => {
+//     const { id } = req.params;
+//     const dato = await Image.findById(id);
+//     res.render('perfil-alumno', { dato });
+// });
 
 // router.get('/image/:id/delete', async (req, res) => {
 //     const { id } = req.params;

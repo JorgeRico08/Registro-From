@@ -22,11 +22,9 @@ const registroSchema = new Schema({
     nombrePapa: {type: String},
     apeMatPapa: {type: String},
     apePatPapa: {type: String},
-    filename: {type: String},
-    path: {type: String},
-    originalname: {type: String},
-    mimetype: {type: String},
-    size: { type: Number},
+    fotoEstudiante:{type: String},
+    certificado: {type: String},
+    comprobanteDomicilio: {type: String},
     created_at: {type: Date, default: Date.now()}
 });
 

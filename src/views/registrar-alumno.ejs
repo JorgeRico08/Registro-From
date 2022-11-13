@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Upload an Image</title>
+    <title>Registrar alumno</title>
     <%- include("partials/head") -%>
 </head>
 
@@ -162,21 +162,44 @@
                     </div>
     
                     <div class="container">
-                      <h6 style="margin-top: 1rem;">Cargar imagenes de los documentos que se solicitan</h6>
+                      <h6 style="margin-top: 1rem;">Cargar imagenes de los documentos que se solicitan (<strong style="color: red;">Imagen de perfil</strong>)</h6>
                     </div>
     
                     <div class="input-group mb-3">
                         <div class="custom-file">
-                            <input type="file" name="image" class="custom-file-input" id="inputGroupFile02">
-                            <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose
-                                file</label>
+                            <input type="file" name="fotoEstudiante" id="fotoEstudiante" class="custom-file-input" multiples id="inputGroupFile02" accept=".jpg, .png, .jpeg">
+                            <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02"> Cargar tu foto de perfil (Solo formato .jpg, .png, .jpeg)</label>
                         </div>
                     </div>
+
+                    <div class="container">
+                      <h6 style="margin-top: 1rem;">Cargar imagenes de los documentos que se solicitan (<strong style="color: red;">Certificado de bachillerato </strong>)</h6>
+                    </div>
+
+                    <div class="input-group mb-3">
+                      <div class="custom-file">
+                          <input type="file" name="certificado" id="certificado" accept=".pdf" class="custom-file-input" multiples id="inputGroupFile02">
+                          <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Sube tu certificado (Solo formato .pdf)</label>
+                      </div>
+                  </div>
+
+                  <div class="container">
+                    <h6 style="margin-top: 1rem;">Cargar imagenes de los documentos que se solicitan (<strong style="color: red;">Comprobate de domicilio </strong>)</h6>
+                  </div>
+
+                  <div class="input-group mb-3">
+                    <div class="custom-file">
+                        <input type="file" name="comprobanteDomicilio" id="comprobanteDomicilio" accept=".pdf" class="custom-file-input" multiples id="inputGroupFile02">
+                        <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Sube tu comprobante de domicilio (Solo formato .pdf)</label>
+                    </div>
+                </div>
+
+                  </div>
                     
                 
                     <div class="form-group">
                         <button class="btn btn-success btn-block">
-                            Upload
+                            Registrar
                         </button>
                     </div>
                     
@@ -188,7 +211,7 @@
             </div>
           </div>
         </div>
-      </div>
+     
 
 </body>
 
