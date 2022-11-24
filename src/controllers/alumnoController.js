@@ -1,5 +1,4 @@
-
-const { unlink } = require('fs-extra');
+const toastr = require('express-toastr');
 
 // Models
 const Registro = require('../models/alumnosModel');
@@ -57,21 +56,3 @@ exports.registar_alumnos = (async (req, res) => {
     });
 });
 
-// exports.ver_alumno_Id = (async (req, res) =>{
-//     const { id } = req.params;
-//     const dato = await Image.findById(id);
-//     res.render('perfil-alumno', { dato });
-// });
-
-// exports.ver_alumno_Id = (async (req, res) => {
-//     const { id } = req.params;
-//     const dato = await Image.findById(id);
-//     res.render('perfil-alumno', { dato });
-// });
-
-// router.get('/image/:id/delete', async (req, res) => {
-//     const { id } = req.params;
-//     const imageDeleted = await Image.findByIdAndDelete(id);
-//     await unlink(path.resolve('./src/public' + imageDeleted.path));
-//     res.redirect('/');
-// });

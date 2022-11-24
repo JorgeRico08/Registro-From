@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil completo</title>
+    <link rel="icon" href="/img/registro.png">
     <%- include("partials/head") -%>
 </head>
 
@@ -48,23 +49,24 @@
                                 <label for="correo" class="form-label">Email</label>
                                 <input type="email" name="correo" disabled value="<%= item.correo %>" placeholder="correo electronico" class="form-control">
                               </div>
-              
-                              <div class="col-6">
-                                <label for="telefonoPersonal" class="form-label">Telefono personal (Solo 10 Digitos).</label>
-                                <input type="tel" name="telefonoPersonal" disabled value="<%= item.telefonoPersonal %>" placeholder="Telefono personal"   maxlength="10" class="form-control">
+                              
+                              <div style="margin-top: 1rem;" class="row">
+                                <div class="mb-4 col-4">
+                                  <label for="telefonoPersonal" class="form-label">Telefono personal.</label>
+                                  <input type="tel" name="telefonoPersonal" disabled value="<%= item.telefonoPersonal %>" placeholder="Telefono personal"   maxlength="10" class="form-control">
+                                </div>
+                
+                                <div class="mb-4 col-4">
+                                  <label for="telefonoCasa" class="form-label">Telefono de tu domicilio.</label>
+                                  <input type="tel" name="telefonoCasa" disabled value="<%= item.telefonoCasa%>" placeholder="Telefono de tu domicilio"  maxlength="10" class="form-control">
+                                </div>
+                
+                                <div class="mb-4 col-4">
+                                  <label for="telefonoTutor" class="form-label">Telefono del tutor acargo.</label>
+                                  <input type="tel" name="telefonoTutor" disabled value="<%= item.telefonoTutor %>"  placeholder="Telefono del tutor"  maxlength="10" class="form-control">
+                                </div>
+                  
                               </div>
-              
-                              <div class="col-6">
-                                <label for="telefonoCasa" class="form-label">Telefono de tu domicilio (Solo 10 Digitos).</label>
-                                <input type="tel" name="telefonoCasa" disabled value="<%= item.telefonoCasa%>" placeholder="Telefono de tu domicilio"  maxlength="10" class="form-control">
-                              </div>
-              
-                              <div class="col-6">
-                                <label for="telefonoTutor" class="form-label">Telefono del tutor acargo (Solo 10 Digitos).</label>
-                                <input type="tel" name="telefonoTutor" disabled value="<%= item.telefonoTutor %>"  placeholder="Telefono del tutor"  maxlength="10" class="form-control">
-                              </div>
-              
-                            
               
                               <div class="container">
               
